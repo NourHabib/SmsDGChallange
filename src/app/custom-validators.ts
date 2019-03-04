@@ -6,7 +6,7 @@ export class CustomValidators {
 
        let confirmPassword = control.get('cpassword').value;
 
-        if(password != confirmPassword) {
+        if(confirmPassword && password != confirmPassword) {
             control.get('cpassword').setErrors( {ConfirmPassword: true} );
         } else {
             return null
