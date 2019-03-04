@@ -1,3 +1,36 @@
-<p>
-  form works!
-</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Form</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form example-container" [formGroup]="loginForm" (submit)="onSubmit()">
+       <mat-form-field>
+         <input matInput formControlName="email" placeholder="Enter your email" required>
+         <mat-error *ngIf="submitted && f.email.errors">
+           <mat-error *ngIf="f.email.errors.required">Email is required</mat-error>
+           <mat-error *ngIf="f.email.errors.pattern">Email must be a valid email address</mat-error>
+         </mat-error>
+       </mat-form-field>
+       <mat-form-field>
+         <input matInput formControlName="password" name="password" type="password" placeholder="Enter password" required>
+         <mat-error *ngIf="submitted && f.password.errors">
+            <mat-error *ngIf="f.password.errors.required">Password is required</mat-error>
+            <mat-error *ngIf="f.password.errors.minlength">Password must be at least 8 characters</mat-error>
+          </mat-error>
+       </mat-form-field>
+       <mat-form-field>
+         <input matInput formControlName="cpassword" name="cpassword" type="password" placeholder="Confirm password" required>
+         <mat-error *ngIf="submitted && f.cpassword.errors">
+          <mat-error *ngIf="f.cpassword.errors.required">Password is required</mat-error>
+          <mat-error *ngIf="f.cpassword.errors.ConfirmPassword">Password is notEqual</mat-error>
+          </mat-error>
+       </mat-form-field>
+
+       <mat-card-actions>
+         <button mat-raised-button type="submit"  color="primary">Submit</button>
+       </mat-card-actions>
+       <mat-hint *ngIf="welcome">Form submmited Successfuly</mat-hint>
+    </form>
+  </mat-card-content>
+
+</mat-card>
