@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule, MatPaginatorModule, MatSortModule,MatFormFieldModule, MatDatepickerModule, MatNativeDateModule,
-  MatToolbarModule, MatInputModule, MatButtonModule, MatCardModule } from '@angular/material';
+  MatToolbarModule, MatInputModule, MatButtonModule, MatCardModule, MatMenuModule, MatIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { EventsComponent } from './components/events/events.component';
@@ -40,7 +40,9 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     MatNativeDateModule,
     MatToolbarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

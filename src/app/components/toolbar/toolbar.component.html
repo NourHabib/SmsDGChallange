@@ -2,7 +2,13 @@
   <mat-toolbar-row>
   <span>SMS Digital Group Challange</span>
     <span class="example-spacer"></span>
-    <a mat-button routerLink="/events">Events Table</a>
-    <a mat-button routerLink="/form">Form</a>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a mat-button routerLink="/events">Events Table</a>
+      <a mat-button routerLink="/form">Form</a>
+    </mat-menu>
    </mat-toolbar-row>
 </mat-toolbar>

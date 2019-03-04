@@ -1,4 +1,4 @@
 <app-table *ngIf="events" [data]="events" [displayedColumns]="displayColumns" ></app-table>
-<div *ngIf="!events">
+<div *ngIf="!events" class="data-loading">
   <h1>Data is loading</h1>
 </div>
